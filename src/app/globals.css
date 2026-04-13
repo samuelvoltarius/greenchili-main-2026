@@ -1,0 +1,283 @@
+/* Google Fonts - must be first */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* CSS Custom Properties */
+:root {
+  /* Color Palette - Green Chili Theme (Dark Mode) */
+  --color-black: #050505;
+  --color-black-soft: #0F0F0F;
+  --color-black-accent: #1A1A1A;
+  --color-green-chili: #00FF41;
+  --color-green-light: #39FF14;
+  --color-green-dark: #008F11;
+  --color-tech-gray: #4A4A4A;
+  --color-text-dim: #A0A0A0;
+  --color-text-bright: #FFFFFF;
+  
+  /* Typography */
+  --font-serif: 'JetBrains Mono', monospace;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Spacing */
+  --section-padding: clamp(4rem, 10vw, 8rem);
+  
+  /* Transitions */
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-black);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-black);
+  color: var(--color-text-bright);
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: var(--color-green-chili);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-text-dim);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-green-chili);
+  color: var(--color-black);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-green-chili);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green-dark);
+}
+
+/* Utility Classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gold {
+  color: var(--color-green-chili);
+}
+
+.text-cream {
+  color: var(--color-text-bright);
+}
+
+.bg-cream {
+  background-color: var(--color-black-soft);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-green-chili);
+  color: var(--color-black);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s var(--transition-smooth);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: var(--color-green-chili);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--color-green-chili);
+  cursor: pointer;
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-green-chili);
+  color: var(--color-black);
+}
+
+/* Section Styling */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+/* Divider */
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-green-chili), transparent);
+  margin: 1.5rem auto;
+}
+
+/* Image Styling */
+.img-reveal {
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.img-reveal img {
+  transition: transform 0.8s var(--transition-smooth);
+  filter: grayscale(20%) contrast(110%);
+}
+
+.img-reveal:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(110%);
+}
+
+/* Gradient Overlays */
+.gradient-dark {
+  background: linear-gradient(to bottom, transparent, rgba(5, 5, 5, 0.9));
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--color-green-chili) 0%, var(--color-green-dark) 100%);
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s var(--transition-smooth) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s var(--transition-smooth) forwards;
+}
+
+/* Green Shimmer Effect */
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    var(--color-green-chili) 0%,
+    var(--color-green-light) 50%,
+    var(--color-green-chili) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
