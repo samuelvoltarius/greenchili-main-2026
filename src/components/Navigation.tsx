@@ -45,7 +45,7 @@ export default function Navigation() {
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-[var(--color-cream)]/95 backdrop-blur-md shadow-sm py-4'
+            ? 'bg-[var(--color-black)]/95 backdrop-blur-md border-b border-white/5 py-4'
             : 'bg-transparent py-6'
         }`}
       >

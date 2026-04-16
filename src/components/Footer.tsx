@@ -40,7 +40,7 @@ export default function Footer() {
                   className="h-8 w-auto"
                 />
                 <div className="flex flex-col">
-                  <span className="font-serif text-xl tracking-[0.1em] text-[var(--color-text-bright)]">
+                  <span className="font-display text-2xl text-[var(--color-text-bright)]">
                     GREEN CHILI
                   </span>
                   <span className="font-mono text-xs tracking-[0.2em] -mt-1 text-[var(--color-green-chili)]">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg text-[var(--color-text-bright)] mb-6">Navigation</h4>
+            <h4 className="font-display text-xl text-[var(--color-text-bright)] mb-6">Navigation</h4>
             <ul className="space-y-3">
               {footerNavLinks.map((item) => (
                 <li key={item.name}>
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-serif text-lg text-[var(--color-text-bright)] mb-6">Kontakt</h4>
+            <h4 className="font-display text-xl text-[var(--color-text-bright)] mb-6">Kontakt</h4>
             <ul className="space-y-3 text-[var(--color-text-dim)] text-sm">
               <li>
                 <a href="tel:+436767901777" className="hover:text-[var(--color-green-chili)] transition-colors">
