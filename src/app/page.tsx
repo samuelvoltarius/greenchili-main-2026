@@ -13,7 +13,7 @@ import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 
 export default function Home() {
-  const [selectedService, setSelectedService] = useState<string>('');
+
 
   return (
     <motion.main
@@ -26,8 +26,8 @@ export default function Home() {
       <VideoHighlight />
       <About />
       <Portfolio />
-      <Services onSelectService={setSelectedService} />
-      <Contact prefilledService={selectedService} />
+      <Services />
+      <Contact prefilledService='' />
       <Footer />
       <CookieBanner />
     </motion.main>
