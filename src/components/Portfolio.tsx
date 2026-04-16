@@ -50,6 +50,16 @@ const portfolioItems = [
     alt: 'Wärmebild Analyse', category: 'thermo',
     label: 'Wärmebild Analyse',
   },
+  {
+    id: 10, type: 'image', src: '/images/portfolio/drohne-05.jpg',
+    alt: 'Drohnenaufnahme Immobilie', category: 'drohne',
+    label: 'Aerial Immobilien',
+  },
+  {
+    id: 11, type: 'image', src: '/images/portfolio/drohne-06.jpg',
+    alt: 'Luftaufnahme Landschaft', category: 'drohne',
+    label: 'Aerial Panorama',
+  },
 ];
 
 const categories = [
